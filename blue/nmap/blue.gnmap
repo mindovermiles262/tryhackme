@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Fri Sep  4 20:54:34 2020 as: nmap -sC -sV -oA nmap/blue -p 1-1001 10.10.228.75
+Host: 10.10.228.75 ()	Status: Up
+Host: 10.10.228.75 ()	Ports: 135/open/tcp//msrpc//Microsoft Windows RPC/, 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp//microsoft-ds//Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)/	Ignored State: closed (998)
+# Nmap done at Fri Sep  4 20:55:02 2020 -- 1 IP address (1 host up) scanned in 28.23 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Fri Sep  4 22:22:28 2020 as: nmap -sV -sC -oA nmap/mrrobot 10.10.5.30
+Host: 10.10.5.30 ()	Status: Up
+Host: 10.10.5.30 ()	Ports: 22/closed/tcp//ssh///, 80/closed/tcp//http///, 443/closed/tcp//https///	Ignored State: filtered (997)
+# Nmap done at Fri Sep  4 22:22:47 2020 -- 1 IP address (1 host up) scanned in 18.42 seconds
