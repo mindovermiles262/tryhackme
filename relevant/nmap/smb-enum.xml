@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Sat Mar 11 10:53:11 2023 as: nmap -p 139,445 -&#45;script smb-enum* -oA nmap/smb-enum THM -->
+<nmaprun scanner="nmap" args="nmap -p 139,445 -&#45;script smb-enum* -oA nmap/smb-enum THM" start="1678557191" startstr="Sat Mar 11 10:53:11 2023" version="7.93" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="139,445"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.138.24" addrtype="ipv4"/>
+<hostnames>
+<hostname name="THM" type="user"/>
+</hostnames>
+</hosthint>
+<host starttime="1678557192" endtime="1678557259"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.10.138.24" addrtype="ipv4"/>
+<hostnames>
+<hostname name="THM" type="user"/>
+<hostname name="THM" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<hostscript><script id="smb-enum-shares" output="&#xa;  account_used: guest&#xa;  \\10.10.138.24\ADMIN$: &#xa;    Type: STYPE_DISKTREE_HIDDEN&#xa;    Comment: Remote Admin&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;&#xa;  \\10.10.138.24\C$: &#xa;    Type: STYPE_DISKTREE_HIDDEN&#xa;    Comment: Default share&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;&#xa;  \\10.10.138.24\IPC$: &#xa;    Type: STYPE_IPC_HIDDEN&#xa;    Comment: Remote IPC&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: READ/WRITE&#xa;  \\10.10.138.24\nt4wrksv: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: &#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: READ/WRITE"><elem key="account_used">guest</elem>
+<table key="\\10.10.138.24\ADMIN$">
+<elem key="Type">STYPE_DISKTREE_HIDDEN</elem>
+<elem key="Comment">Remote Admin</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+<table key="\\10.10.138.24\C$">
+<elem key="Type">STYPE_DISKTREE_HIDDEN</elem>
+<elem key="Comment">Default share</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+<table key="\\10.10.138.24\IPC$">
+<elem key="Type">STYPE_IPC_HIDDEN</elem>
+<elem key="Comment">Remote IPC</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+<table key="\\10.10.138.24\nt4wrksv">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment"></elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+</script><script id="smb-enum-sessions" output="&#xa;  &lt;nobody&gt;&#xa;"/></hostscript><times srtt="225269" rttvar="137909" to="776905"/>
+</host>
+<runstats><finished time="1678557259" timestr="Sat Mar 11 10:54:19 2023" summary="Nmap done at Sat Mar 11 10:54:19 2023; 1 IP address (1 host up) scanned in 67.77 seconds" elapsed="67.77" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

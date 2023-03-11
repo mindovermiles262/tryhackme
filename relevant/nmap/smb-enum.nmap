@@ -1,0 +1,35 @@
+# Nmap 7.93 scan initiated Sat Mar 11 10:53:11 2023 as: nmap -p 139,445 --script smb-enum* -oA nmap/smb-enum THM
+Nmap scan report for THM (10.10.138.24)
+Host is up (0.23s latency).
+
+PORT    STATE SERVICE
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+
+Host script results:
+| smb-enum-shares: 
+|   account_used: guest
+|   \\10.10.138.24\ADMIN$: 
+|     Type: STYPE_DISKTREE_HIDDEN
+|     Comment: Remote Admin
+|     Anonymous access: <none>
+|     Current user access: <none>
+|   \\10.10.138.24\C$: 
+|     Type: STYPE_DISKTREE_HIDDEN
+|     Comment: Default share
+|     Anonymous access: <none>
+|     Current user access: <none>
+|   \\10.10.138.24\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: Remote IPC
+|     Anonymous access: <none>
+|     Current user access: READ/WRITE
+|   \\10.10.138.24\nt4wrksv: 
+|     Type: STYPE_DISKTREE
+|     Comment: 
+|     Anonymous access: <none>
+|_    Current user access: READ/WRITE
+| smb-enum-sessions: 
+|_  <nobody>
+
+# Nmap done at Sat Mar 11 10:54:19 2023 -- 1 IP address (1 host up) scanned in 67.77 seconds
